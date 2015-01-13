@@ -27,6 +27,9 @@ describe('Big Bro', function () {
     //     expect(bro.clearListeners).to.be.a.Function;
     // });
 
+    // Note that this fails because the temp objects don't bubble up properly. We detect
+    // the change but we're unable to pass back the fully updated object when sub resources
+    // are recieving the updates. 
     it('should fire off event listeners when little bro changes', function (done) {
         var numChanges = 0;
 
@@ -52,8 +55,7 @@ describe('Big Bro', function () {
                     }
                 };
 
-                expect(expected[numChanges]).to.deep.equal(current);
-
+                expect(current).to.deep.equal(expected[numChanges]);
                 if (numChanges === 2){
                     done();
                 }
@@ -63,7 +65,8 @@ describe('Big Bro', function () {
         numChanges++;
         littleBro.a = 'F';
         numChanges++;
-        littleBro.d = 'G';
+
+        littleBro.c.d = 'G';
     });
 
 });
