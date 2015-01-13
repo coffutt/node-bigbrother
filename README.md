@@ -1,6 +1,6 @@
 # big-bro
 
-Node module for watching an object for changes
+Node module for watching an object for changes. WORK IN PROGRESS.
 
 ## Getting Started
 Install the module with: `npm install big-bro`
