@@ -22,7 +22,8 @@ var anObj = {
     c: {
         d: 'D',
         e: 'E'
-    }
+    },
+    arr: [0, 1, 2]
 };
 
 // Instantiate wiretapping of your model object. Callbacks can be a single function
@@ -33,6 +34,10 @@ var holder = bigbro({
         // Do something with the updated version of your model object.
     }
 });
+
+// Make some changes to your watched model. All of the following will fire off your callbacks.
+anObj.a = 'F';
+anObj.arr.push(3);
 
 // Add another wiretapper.
 holder.addListener(function (updatedObj) {
