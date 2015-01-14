@@ -21,6 +21,9 @@
   "keywords": [
     "watch"
   ],
+  "publishConfig": {
+      "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "jshint": "^2.5.11",
     "auto-istanbul": "0.0.3",
