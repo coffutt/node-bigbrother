@@ -16,8 +16,7 @@ test:
 		--reporter $(REPORTER)
 
 lint:
-	$(JSHINT) ./lib --config $(BASE)/.jshintrc && \
-	$(JSHINT) ./test --config $(BASE)/.jshintrc
+	$(JSHINT) ./lib --config $(BASE)/.jshintrc
 
 # Sends the documentation to gh-pages.
 publish.report:
