@@ -19,7 +19,7 @@
     "lib"
   ],
   "keywords": [
-    "watch"
+    "watch", "object", "watcher", "changes", "moniter"
   ],
   "publishConfig": {
       "registry": "https://registry.npmjs.org/"
